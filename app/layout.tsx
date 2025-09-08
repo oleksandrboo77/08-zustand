@@ -14,7 +14,7 @@ const roboto = Roboto({
 
 const APP_URL = "https://<your-vercel-domain>";
 const APP_TITLE = "NoteHub";
-const APP_DESC = "NoteHub — швидкі нотатки з тегами, пошуком та переглядом.";
+const APP_DESC = "NoteHub — fast notes with tags, search, and preview.";
 
 export const metadata: Metadata = {
   title: APP_TITLE,

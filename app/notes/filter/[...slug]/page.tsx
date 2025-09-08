@@ -32,7 +32,7 @@ export async function generateMetadata({
   const pretty = tag ?? "All";
 
   const title = `Notes • ${pretty} — NoteHub`;
-  const description = `Перегляд нот за фільтром: ${pretty}. Знаходьте потрібні нотатки швидко.`;
+  const description = `Browse notes filtered by: ${pretty}. Find what you need fast.`;
 
   const base = "https://<your-vercel-domain>";
   const slugStr = Array.isArray(slug)

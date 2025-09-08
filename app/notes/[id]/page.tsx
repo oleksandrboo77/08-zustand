@@ -17,8 +17,7 @@ export async function generateMetadata({
 
   try {
     const note = await fetchNoteById(id);
-    const snippet =
-      (note.content ?? "").trim().slice(0, 140) || "Перегляд нотатки";
+    const snippet = (note.content ?? "").trim().slice(0, 140) || "Viewing note";
     const title = `${note.title} — NoteHub`;
     const description = snippet;
 
@@ -34,7 +33,7 @@ export async function generateMetadata({
     };
   } catch {
     const title = `Note — ${id} — NoteHub`;
-    const description = "Перегляд нотатки.";
+    const description = "Viewing note.";
     return {
       title,
       description,

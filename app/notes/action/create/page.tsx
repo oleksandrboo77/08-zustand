@@ -4,10 +4,10 @@ import css from "./CreateNote.module.css";
 
 export const metadata: Metadata = {
   title: "Create Note — NoteHub",
-  description: "Creating a new note in NoteHub.",
+  description: "Create a new note in NoteHub.",
   openGraph: {
     title: "Create Note — NoteHub",
-    description: "Creating a new note in NoteHub.",
+    description: "Create a new note in NoteHub.",
     url: "https://my-deployment-url.example.com/notes/action/create",
     images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
   },
