@@ -12,7 +12,6 @@ function parseTag(slug: string[] | string | undefined): NoteTag | undefined {
   if (!slug) return undefined;
   const seg = Array.isArray(slug) ? slug[0] : slug;
   if (seg === "All") return undefined;
-
   const allowed: NoteTag[] = [
     "Todo",
     "Work",
@@ -33,13 +32,13 @@ export async function generateMetadata({
   const pretty = tag ?? "All";
 
   const title = `Notes • ${pretty} — NoteHub`;
-  const description = `View notes by filter: ${pretty}. Find the notes you need quickly.`;
+  const description = `Перегляд нот за фільтром: ${pretty}. Знаходьте потрібні нотатки швидко.`;
 
-  const path =
-    `/notes/filter/${Array.isArray(slug) ? slug.join("/") : (slug ?? "").toString()}`.replace(
-      /\/+$/,
-      ""
-    ) || "/notes/filter";
+  const base = "https://<your-vercel-domain>";
+  const slugStr = Array.isArray(slug)
+    ? slug.join("/")
+    : (slug ?? "").toString();
+  const path = slugStr ? `/notes/filter/${slugStr}` : "/notes/filter";
 
   return {
     title,
@@ -47,7 +46,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://my-deployment-url.example.com${path}`,
+      url: `${base}${path}`,
       images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
     },
   };

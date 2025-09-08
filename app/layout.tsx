@@ -12,14 +12,18 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const APP_URL = "https://<your-vercel-domain>";
+const APP_TITLE = "NoteHub";
+const APP_DESC = "NoteHub — швидкі нотатки з тегами, пошуком та переглядом.";
+
 export const metadata: Metadata = {
-  title: "NoteHub",
-  description: "NoteHub — quick notes with tags, search, and browsing.",
-  metadataBase: new URL("https://my-deployment-url.example.com"),
+  title: APP_TITLE,
+  description: APP_DESC,
+  metadataBase: new URL(APP_URL),
   openGraph: {
-    title: "NoteHub",
-    description: "NoteHub — quick notes with tags, search, and browsing.",
-    url: "https://my-deployment-url.example.com",
+    title: APP_TITLE,
+    description: APP_DESC,
+    url: APP_URL,
     images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
   },
 };

@@ -13,10 +13,12 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
+  const base = "https://<your-vercel-domain>";
 
   try {
     const note = await fetchNoteById(id);
-    const snippet = (note.content ?? "").trim().slice(0, 140) || "View a note";
+    const snippet =
+      (note.content ?? "").trim().slice(0, 140) || "Перегляд нотатки";
     const title = `${note.title} — NoteHub`;
     const description = snippet;
 
@@ -26,20 +28,20 @@ export async function generateMetadata({
       openGraph: {
         title,
         description,
-        url: `https://my-deployment-url.example.com/notes/${id}`,
+        url: `${base}/notes/${id}`,
         images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
       },
     };
   } catch {
     const title = `Note — ${id} — NoteHub`;
-    const description = "View a note.";
+    const description = "Перегляд нотатки.";
     return {
       title,
       description,
       openGraph: {
         title,
         description,
-        url: `https://my-deployment-url.example.com/notes/${id}`,
+        url: `${base}/notes/${id}`,
         images: ["https://ac.goit.global/fullstack/react/notehub-og-meta.jpg"],
       },
     };
