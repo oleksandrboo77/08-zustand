@@ -12,7 +12,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-const APP_URL = "https://<your-vercel-domain>";
+const APP_URL = "https://ac.goit.global/fullstack/react/";
 const APP_TITLE = "NoteHub";
 const APP_DESC = "NoteHub — fast notes with tags, search, and preview.";
 
