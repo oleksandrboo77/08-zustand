@@ -1,0 +1,8 @@
+.layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; padding: 24px; }
+.sidebar { position: sticky; top: 16px; }
+.main { min-height: 400px; }
+@media (max-width: 767px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; order: 2; }
+  .main { order: 1; }
+}

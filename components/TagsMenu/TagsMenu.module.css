@@ -1,0 +1,50 @@
+.menuContainer {
+  position: relative;
+}
+.menuButton {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.menuList {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  display: none;
+  z-index: 20;
+}
+.open {
+  display: block;
+}
+.menuItem {
+}
+.menuLink {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.menuLink:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  .menuButton {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .menuList {
+    background: #111;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .menuLink:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
