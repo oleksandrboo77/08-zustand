@@ -34,7 +34,7 @@ export async function generateMetadata({
   const title = `Notes • ${pretty} — NoteHub`;
   const description = `Browse notes filtered by: ${pretty}. Find what you need fast.`;
 
-  const base = "https://ac.goit.global/fullstack/react/";
+  const base = "https://08-zustand-rho-amber.vercel.app";
   const slugStr = Array.isArray(slug)
     ? slug.join("/")
     : (slug ?? "").toString();

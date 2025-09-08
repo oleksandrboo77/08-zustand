@@ -13,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const base = "https://ac.goit.global/fullstack/react/";
+  const base = "https://08-zustand-rho-amber.vercel.app";
 
   try {
     const note = await fetchNoteById(id);
